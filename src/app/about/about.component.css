@@ -1,0 +1,27 @@
+body{
+    height: 100%;
+}
+
+div.container {
+ height: 5em;
+ position: relative 
+}
+
+.flex-container {
+   background-color: lightgrey;
+   display: flex;
+   height: auto;
+   align-content: center;
+   align-items: center;
+ }
+ 
+ .flex-container > div {
+   color:black;
+   border-radius: 20px;
+   border-style: outset;
+   border-color: black;
+   background-color: white;
+   font-family: "Brandon Grotesque Bold";
+   text-align: center;
+   font-size: 30px;
+ }

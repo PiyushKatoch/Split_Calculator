@@ -1,0 +1,51 @@
+
+div.container {
+    height: 5em;
+    position: relative 
+  }
+  div.container h2 {
+    margin: 0;
+    position: absolute;
+    color:beige;
+    font-style: italic;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+   }
+  
+  
+  .flex-container {
+      display: flex;
+      height: auto;
+      flex-wrap: wrap;
+      align-content: space-between;
+      background-color: lightgray;
+    }
+    
+    .flex-container > div {
+      width: 50%;
+      color:coral;
+      font-family: "Brandon Grotesque Bold";
+      text-align: center;
+      font-size: 30px;
+    }
+    .button {
+      background-color: #f4511e;
+      font-family: "Brandon Grotesque Bold";
+      border-radius: 5%;
+      border: none;
+      color: white;
+      text-align: center;
+      font-size: 1em;
+      opacity: 0.6;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+  
+    }
+    
+    .button:hover {opacity: 1}
+  
+  

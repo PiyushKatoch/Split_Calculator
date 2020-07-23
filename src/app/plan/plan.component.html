@@ -1,0 +1,70 @@
+<body>
+        <div class=container style= "background-color:black;  color:white; ">
+            <h2>Plan are Nothing , Planning is Everything</h2>   
+        </div>
+    <div class="flex-container">
+        <div style="align-content: center; background-color:beige;  color:black; width:100%; height:170px ;">
+            <h3>Plan Event Expenditure before hand , we provide you to facility to form a group before going to an event.
+                You will also get to know what will be the estimated expenditure per person.
+            </h3>
+        </div>
+    </div>
+    <div class="flex-container">
+        <br><br><br>
+        <div style="align-content: center; background-color: white; color:#e60000; 
+        width:70%; height:auto ;  margin-left: 24%; margin-right: 24%; margin-top: 30px; margin-bottom: 30px;
+        border-color: black; border-radius: 20px; border-style: solid; border-width:5px;">
+            <h3 style="color: black;">Create a Group</h3>
+            <p style="color: black;">
+                Event Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' #evt><br>
+                <br>
+                Event Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' #dat><br>
+                <br>
+                Minimum Event Budget&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;<input type='number' #minamt><br>
+                <br>
+                Maximum Event Budget&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;<input type='number' #maxamt><br>
+                <br>
+                Number of Group Members&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='number' #num><br> 
+                <br>
+                <button (click)='createEvent(evt,dat,minamt,maxamt,num)'class="button" style="width:180px; height:63px ;background-color:black; color:white; font-size:1em; margin-bottom: 30px;">Proceed</button>  
+           </p>
+        </div>
+    </div>
+    <br>
+    <div class="flex-container" style="background-color:darkgray;">
+        <div style="align-content: center; background-color:black; color:white; 
+        width:80%; height:auto ;  margin-left: 9%; margin-right: 9%; margin-top: 30px; margin-bottom: 30px;
+        border-color: white; border-radius: 20px; border-style: solid; border-width:5px;">
+            <h3 style="color: white">Enter Group Member Details</h3>
+                <p *ngFor="let item of arr"  >  
+                    Member Name : <input type='text' #name>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button (click)="addMember(name)" class="button" style="width:80px; height:40px ;background-color:white; color:black; font-size: 0.5em;">Add</button> 
+                </p>
+                <button (click)='geted()' class="button" style="width:180px; height:70px ;background-color:white; color:black; margin-bottom: 30px;">Event Details</button>
+        </div>
+    </div>
+    <br>
+    <div class="flex-container">
+        <div style="align-content: center; background-color: white; color:black; 
+        width:50%; height:auto ;  margin-left: 24%; margin-right: 24%;  margin-bottom: 30px; margin-top: 30px;
+        border-color: black; border-radius: 20px; border-style: solid; border-width:5px;">
+            
+            <h3 style="color: black;">Event Details :</h3>
+            <p style="color: black">    
+            <p *ngFor="let item of ed.entries()">  
+                {{item[0]}}&nbsp;&nbsp;:&nbsp;&nbsp;{{item[1]}}
+            </p>
+            <h3 style="color: black;">Group Members are :</h3>
+            <p style="color: black">    
+            <p *ngFor="let item of detail.entries()">  
+                    {{item[0]}}
+            </p>
+            <h3>Have a Great Trip </h3>
+        </div>
+    </div>
+    <br>
+</body>
+
+
